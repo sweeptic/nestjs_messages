@@ -6,7 +6,13 @@ import { MessagesService } from './messages.service';
 export class MessagesController {
     // messagesService: MessagesService
 
-    constructor(public messagesService: MessagesService) {
+    constructor(
+        public messagesService: MessagesService,
+        public messagesService2: MessagesService,
+        public messagesService3: MessagesService
+    ) {
+        console.log(messagesService === messagesService2);
+        console.log(messagesService === messagesService3);
         // DONT DO THIS REAL APP
         // USE DEPEDENCY INJECTION
         // this.messagesService = new MessagesService()
